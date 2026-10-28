@@ -8,31 +8,6 @@ Dự án website xem phim viết bằng PHP, MySQL/MariaDB, HTML, CSS và JavaSc
 - MySQL hoặc MariaDB.
 - Có thể dùng XAMPP để chạy PHP và MySQL trên Windows.
 
-## Cài đặt với XAMPP
-
-1. Chép thư mục dự án vào `C:\xampp\htdocs`.
-2. Mở XAMPP Control Panel và khởi động **Apache** cùng **MySQL**.
-3. Mở `http://localhost/phpmyadmin`.
-4. Tạo database tên `assfilm`, chọn collation `utf8mb4_general_ci` nếu được hỏi.
-5. Chọn database `assfilm` vừa tạo, vào **Import**, chọn file `đây là sql.sql` ở thư mục gốc dự án, rồi nhấn **Import**. File này là bản dữ liệu đầy đủ hơn. Không cần import thêm `admin/asset/database/assfilm.sql`; đó là một bản dump cũ hơn và có lệnh tạo database riêng.
-6. Kiểm tra cấu hình kết nối trong:
-   - `libs/db.php`
-   - `admin/libs/db.php`
-
-   Cập nhật `$host`, `$user`, `$pass` và `$db` theo tài khoản MySQL trên máy của bạn. Cấu hình XAMPP mặc định thường dùng host `localhost`, user `root`, mật khẩu để trống và database `assfilm`.
-7. Mở website tại `http://localhost/<ten-thu-muc-du-an>/`.
-
-## Chạy bằng PHP tích hợp
-
-Nếu PHP và MySQL đã cài đặt, mở PowerShell tại thư mục dự án và chạy:
-
-```powershell
-php -S 127.0.0.1:8000 -t .
-```
-
-Sau đó mở `http://127.0.0.1:8000/`. Dừng máy chủ bằng `Ctrl+C`.
-
-Máy chủ tích hợp của PHP chỉ phục vụ trang web; MySQL vẫn cần được khởi động riêng.
 
 ## Trang quản trị
 
